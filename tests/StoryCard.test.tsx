@@ -2,7 +2,7 @@ import React from 'react'
 import StoryCard from '../src/components/StoryCard/StoryCard'
 import userEvent from '@testing-library/user-event'
 import { render, screen } from '@testing-library/react'
-import { expect, test, describe, vi } from 'vitest'
+import { expect, test, describe, vi, afterEach } from 'vitest'
 import { Story } from '../src/types/Story'
 
 describe('StoryCard tests', () => {
@@ -12,6 +12,7 @@ describe('StoryCard tests', () => {
     createdAt: '2020-05-15T20:57:04.000Z',
     favorite: false,
     url: 'some url',
+    storyId: 1235123,
   }
 
   test('Should render the component provided the right data', () => {
@@ -35,6 +36,7 @@ describe('StoryCard tests', () => {
     await userEvent.click(heart)
 
     expect(onClick).toHaveBeenCalledOnce
+    onClick.mockRestore()
   })
 
   test('should display the correct information on the card', async () => {

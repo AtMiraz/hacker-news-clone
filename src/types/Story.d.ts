@@ -1,7 +1,8 @@
 export type Story = {
-  title: string;
-  author: string;
-  createdAt: string;
-  url: string;
-  favorite: boolean;
+  storyId: number
+  title: string | null
+  author: string
+  createdAt: string
+  url: string | null
+  favorite: boolean
 }

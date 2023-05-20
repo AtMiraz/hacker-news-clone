@@ -7,6 +7,7 @@ exports[`StoryCard tests > Should render the component provided the right data 1
     <div>
       <div
         class="hacker__news__app-story-card"
+        data-testid="story-card-component"
       >
         <div
           class="story__card__info"
@@ -49,6 +50,7 @@ exports[`StoryCard tests > Should render the component provided the right data 1
   "container": <div>
     <div
       class="hacker__news__app-story-card"
+      data-testid="story-card-component"
     >
       <div
         class="story__card__info"

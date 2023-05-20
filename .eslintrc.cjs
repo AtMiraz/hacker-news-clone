@@ -19,6 +19,5 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {},
-  ignorePatterns: ["src/assets/**"],
-
+  ignorePatterns: ['src/assets/**'],
 }

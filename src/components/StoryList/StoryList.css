@@ -1,0 +1,11 @@
+.hacker__news__app-list-container {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.hacker__news__app-list-container > .hacker__news__app-story-card {
+  margin-bottom: 1.875rem;
+}
