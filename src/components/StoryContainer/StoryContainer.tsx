@@ -69,10 +69,12 @@ function StoryContainer() {
   return (
     <div className="hacker__news__app-story-container">
       <TabSelect items={tabs} onUpdate={handleTabUpdate}></TabSelect>
-      <DropdownSelect
-        items={newsCategories}
-        onUpdate={handleDropdownUpdate}
-      ></DropdownSelect>
+      {currentMode === 'all' && (
+        <DropdownSelect
+          items={newsCategories}
+          onUpdate={handleDropdownUpdate}
+        ></DropdownSelect>
+      )}
       <StoryList mode={currentMode} newsType={newsType}></StoryList>
     </div>
   )

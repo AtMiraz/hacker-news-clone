@@ -38,7 +38,7 @@ exports[`StoryCard tests > Should render the component provided the right data 1
           class="story__card__actions"
         >
           <img
-            alt="favorited"
+            alt="favorite"
             class="story__card__actions-heart"
             data-testid="heart-button"
             src="/src/assets/svgs/heart-outline.svg"
@@ -81,7 +81,7 @@ exports[`StoryCard tests > Should render the component provided the right data 1
         class="story__card__actions"
       >
         <img
-          alt="favorited"
+          alt="favorite"
           class="story__card__actions-heart"
           data-testid="heart-button"
           src="/src/assets/svgs/heart-outline.svg"

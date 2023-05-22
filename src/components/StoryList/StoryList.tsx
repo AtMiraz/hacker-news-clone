@@ -41,7 +41,23 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
       isFetching.current = true
       handlePopulateStories()
         .then((data) => {
-          setStories(data)
+          // In case the user already has some favorites
+          // Try to find the favorites to mark them.
+          const favorites = handleGetFavoriteStories()
+          const stories = data.map((story) => {
+            const found = favorites.find(
+              (favoritedStory) =>
+                story.createdAt === favoritedStory.createdAt &&
+                story.storyId === favoritedStory.storyId
+            )
+            if (found) {
+              return { ...story, favorite: true }
+            }
+            return story
+          })
+          console.log('stories', stories)
+          console.log('favorite', favorites)
+          setStories(stories)
           isFetching.current = false
         })
         .catch((e) => {
@@ -52,7 +68,9 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
 
   return (
     <div
-      className="hacker__news__app-list-container"
+      className={`hacker__news__app-list-container ${
+        mode === 'favorites' && 'extra-margin-top'
+      }`}
       data-testid="list-container"
     >
       {stories.length > 0

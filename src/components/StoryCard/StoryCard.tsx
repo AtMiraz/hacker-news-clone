@@ -43,7 +43,7 @@ function StoryCard({ story, onClick }: StoryProps) {
           data-testid="heart-button"
           onClick={() => onClick(story)}
           src={story.favorite ? heartFilled : heartOutline}
-          alt="favorited"
+          alt={story.favorite ? 'favorited' : 'favorite'}
         />
       </div>
     </div>

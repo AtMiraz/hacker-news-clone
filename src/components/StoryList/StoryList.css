@@ -9,3 +9,7 @@
 .hacker__news__app-list-container > .hacker__news__app-story-card {
   margin-bottom: 1.875rem;
 }
+
+.hacker__news__app-list-container.extra-margin-top {
+  margin-top: 9rem;
+}

@@ -6,7 +6,7 @@ exports[`StoryList test > should render the component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="hacker__news__app-list-container"
+        class="hacker__news__app-list-container false"
         data-testid="list-container"
       >
         <div
@@ -26,7 +26,7 @@ exports[`StoryList test > should render the component 1`] = `
               <span
                 data-testid="story-info"
               >
-                2020-05-15T20:57:04.000Z
+                2020-05-15T20:57:02.000Z
                  ago by 
                 an author
               </span>
@@ -42,7 +42,7 @@ exports[`StoryList test > should render the component 1`] = `
             class="story__card__actions"
           >
             <img
-              alt="favorited"
+              alt="favorite"
               class="story__card__actions-heart"
               data-testid="heart-button"
               src="/src/assets/svgs/heart-outline.svg"
@@ -85,7 +85,7 @@ exports[`StoryList test > should render the component 1`] = `
               alt="favorited"
               class="story__card__actions-heart"
               data-testid="heart-button"
-              src="/src/assets/svgs/heart-outline.svg"
+              src="/src/assets/svgs/heart-filled.svg"
             />
           </div>
         </div>
@@ -94,7 +94,7 @@ exports[`StoryList test > should render the component 1`] = `
   </body>,
   "container": <div>
     <div
-      class="hacker__news__app-list-container"
+      class="hacker__news__app-list-container false"
       data-testid="list-container"
     >
       <div
@@ -114,7 +114,7 @@ exports[`StoryList test > should render the component 1`] = `
             <span
               data-testid="story-info"
             >
-              2020-05-15T20:57:04.000Z
+              2020-05-15T20:57:02.000Z
                ago by 
               an author
             </span>
@@ -130,7 +130,7 @@ exports[`StoryList test > should render the component 1`] = `
           class="story__card__actions"
         >
           <img
-            alt="favorited"
+            alt="favorite"
             class="story__card__actions-heart"
             data-testid="heart-button"
             src="/src/assets/svgs/heart-outline.svg"
@@ -173,7 +173,7 @@ exports[`StoryList test > should render the component 1`] = `
             alt="favorited"
             class="story__card__actions-heart"
             data-testid="heart-button"
-            src="/src/assets/svgs/heart-outline.svg"
+            src="/src/assets/svgs/heart-filled.svg"
           />
         </div>
       </div>

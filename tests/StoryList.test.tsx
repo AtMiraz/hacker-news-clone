@@ -10,10 +10,10 @@ vi.mock('../src/utils/utils', () => {
         {
           title: 'some title',
           author: 'an author',
-          createdAt: '2020-05-15T20:57:04.000Z',
+          createdAt: '2020-05-15T20:57:02.000Z',
           favorite: false,
           url: 'some url',
-          storyId: 1235123,
+          storyId: 120192921,
         },
         {
           title: 'some title',
@@ -30,7 +30,7 @@ vi.mock('../src/utils/utils', () => {
         {
           title: 'some title',
           author: 'an author',
-          createdAt: '2020-05-15T20:57:04.000Z',
+          createdAt: '2020-05-16T20:57:04.000Z',
           favorite: false,
           url: 'some url',
           storyId: 1235123,
@@ -58,5 +58,14 @@ describe('StoryList test', () => {
     await screen.findByTestId('list-container')
     const cards = await screen.findAllByTestId('story-card-component')
     expect(cards.length).toBe(2)
+  })
+
+  test('should mark a story as favorite by default when fetching if its on the localStorage', async () => {
+    render(<StoryList />)
+    await screen.findByTestId('list-container')
+
+    const favorited = await screen.getByAltText('favorited')
+
+    expect(favorited).to.exist
   })
 })
