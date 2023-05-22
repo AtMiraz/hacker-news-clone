@@ -1,6 +1,5 @@
 import React from 'react'
 import StoryList from '../src/components/StoryList/StoryList'
-import userEvent from '@testing-library/user-event'
 import { render, screen } from '@testing-library/react'
 import { expect, test, describe, vi, afterAll } from 'vitest'
 
@@ -38,6 +37,7 @@ vi.mock('../src/utils/utils', () => {
         },
       ]
     },
+    handleTimeSinceDate: (string) => string,
   }
 })
 

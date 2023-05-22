@@ -1,9 +1,7 @@
 import './StoryCard.css'
-import clock from '../../assets/svgs/clock.svg'
-import heartFilled from '../../assets/svgs/heart-filled.svg'
-import heartOutline from '../../assets/svgs/heart-outline.svg'
+import { heartFilled, heartOutline, clock } from '../../assets/svgs/'
 import { Story } from '../../types/Story'
-import { formatDistance } from 'date-fns'
+import { handleTimeSinceDate } from '../../utils/utils'
 
 type StoryProps = {
   story: Story
@@ -22,11 +20,6 @@ function openInNewWindow(story: Story): void {
   if (newWindow) newWindow.opener = null
 }
 
-function handleDate(dateString: string): string {
-  const date = new Date(dateString)
-  return formatDistance(new Date(), date, { addSuffix: false })
-}
-
 function StoryCard({ story, onClick }: StoryProps) {
   return (
     <div
@@ -37,7 +30,7 @@ function StoryCard({ story, onClick }: StoryProps) {
         <div className="story__card__info-author">
           <img src={clock} alt="clock" />
           <span data-testid="story-info">
-            {handleDate(story.createdAt)} ago by {story.author}
+            {handleTimeSinceDate(story.createdAt)} ago by {story.author}
           </span>
         </div>
         <div className="story__card__info-title" data-testid="story-title">

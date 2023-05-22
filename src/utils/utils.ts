@@ -1,6 +1,7 @@
 import { Hit } from '../types/ApiResponse'
 import { Story } from '../types/Story'
 import { News } from '../types/StoryList'
+import { formatDistance } from 'date-fns'
 
 function transformHits(hits: Hit[]): Story[] {
   return hits.map((hit) => {
@@ -30,6 +31,14 @@ export function handleGetFavoriteStories(): Story[] {
   return []
 }
 
+export function handleSetCategory(category: News): void {
+  localStorage.setItem('hacker__news__clone__category', category)
+}
+
+export function handleGetCategory() {
+  return localStorage.getItem('hacker__news__clone__category')
+}
+
 export function handleAddRemoveFavorite(story: Story) {
   let favorites = handleGetFavoriteStories()
 
@@ -45,4 +54,23 @@ export function handleAddRemoveFavorite(story: Story) {
     'hacker__news__clone__favorites',
     JSON.stringify(favorites)
   )
+}
+
+export function handleClickOutside(
+  ref: React.MutableRefObject<HTMLElement>,
+  callback: () => void
+) {
+  const myRef = ref
+  function mouseEvent(event: MouseEvent) {
+    if (myRef.current && !myRef.current.contains(event.target as Node)) {
+      callback()
+    }
+  }
+
+  return mouseEvent
+}
+
+export function handleTimeSinceDate(dateString: string): string {
+  const date = new Date(dateString)
+  return formatDistance(new Date(), date, { addSuffix: false })
 }

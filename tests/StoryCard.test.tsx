@@ -2,7 +2,7 @@ import React from 'react'
 import StoryCard from '../src/components/StoryCard/StoryCard'
 import userEvent from '@testing-library/user-event'
 import { render, screen } from '@testing-library/react'
-import { expect, test, describe, vi, afterEach } from 'vitest'
+import { expect, test, describe, vi } from 'vitest'
 import { Story } from '../src/types/Story'
 
 describe('StoryCard tests', () => {

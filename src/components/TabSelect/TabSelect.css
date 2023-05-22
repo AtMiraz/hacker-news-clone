@@ -1,0 +1,30 @@
+.tab__select-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.tab__select-item {
+  font-weight: 500;
+  width: 6.125rem;
+  height: 1.938rem;
+  border-radius: 2px;
+  font-family: Roboto;
+  color: #606060;
+  border: solid 1px #d6d6d6;
+}
+
+.tab__select-item.selected {
+  color: #1797ff;
+  border: solid 1px #1797ff;
+}
+
+.tab__select-item:hover {
+  border: solid 1px #1797ff;
+}
+
+.tab__select-label {
+  display: block;
+  margin-top: 4px;
+}

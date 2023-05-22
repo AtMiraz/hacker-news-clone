@@ -14,5 +14,5 @@ export type Hit = {
   created_at_i: number
   _tags: string[]
   objectID: string
-  _highlightResult: any
+  _highlightResult: unknown
 }

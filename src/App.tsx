@@ -1,12 +1,12 @@
 import './App.css'
 import Header from './components/Header/Header'
-import StoryList from './components/StoryList/StoryList'
+import StoryContainer from './components/StoryContainer/StoryContainer'
 
 function App() {
   return (
     <>
       <Header />
-      <StoryList />
+      <StoryContainer></StoryContainer>
     </>
   )
 }

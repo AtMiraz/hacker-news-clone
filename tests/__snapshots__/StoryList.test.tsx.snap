@@ -26,7 +26,7 @@ exports[`StoryList test > should render the component 1`] = `
               <span
                 data-testid="story-info"
               >
-                about 3 years
+                2020-05-15T20:57:04.000Z
                  ago by 
                 an author
               </span>
@@ -66,7 +66,7 @@ exports[`StoryList test > should render the component 1`] = `
               <span
                 data-testid="story-info"
               >
-                about 3 years
+                2020-05-16T20:57:04.000Z
                  ago by 
                 an author
               </span>
@@ -114,7 +114,7 @@ exports[`StoryList test > should render the component 1`] = `
             <span
               data-testid="story-info"
             >
-              about 3 years
+              2020-05-15T20:57:04.000Z
                ago by 
               an author
             </span>
@@ -154,7 +154,7 @@ exports[`StoryList test > should render the component 1`] = `
             <span
               data-testid="story-info"
             >
-              about 3 years
+              2020-05-16T20:57:04.000Z
                ago by 
               an author
             </span>

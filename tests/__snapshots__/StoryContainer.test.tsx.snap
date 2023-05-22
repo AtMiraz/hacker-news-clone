@@ -1,0 +1,282 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StoryContainer > should render the component 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="hacker__news__app-story-container"
+      >
+        <div
+          class="tab__select-container"
+          data-testid="tab-select"
+        >
+          <div
+            class="tab__select-item selected"
+          >
+            <label
+              class="tab__select-label"
+              data-testid="tab-select-item"
+            >
+              All
+            </label>
+          </div>
+          <div
+            class="tab__select-item false"
+          >
+            <label
+              class="tab__select-label"
+              data-testid="tab-select-item"
+            >
+              My faves
+            </label>
+          </div>
+        </div>
+        <div
+          class="select__options-container"
+          data-testid="dropdown-select"
+        >
+          <div
+            class="select__options-selected"
+            data-testid="option-selected"
+          >
+            <img
+              alt="/src/assets/images/angular-logo.png"
+              class="select__options-image"
+              src="/src/assets/images/angular-logo.png"
+            />
+            <span
+              class="select__options-label"
+              data-testid="selected-option"
+            >
+              Angular
+            </span>
+            <i
+              class="select__options-arrow open"
+            />
+          </div>
+          <div
+            class="select__options-items false"
+            data-testid="select-options-items"
+          >
+            <div
+              class="select__options-item select__options-item-selected"
+              data-testid="select-options-item"
+            >
+              <img
+                alt="angular"
+                class="select__options-image"
+                src="/src/assets/images/angular-logo.png"
+              />
+              <span
+                class="select__options-label"
+              >
+                Angular
+              </span>
+            </div>
+            <div
+              class="select__options-item false"
+              data-testid="select-options-item"
+            >
+              <img
+                alt="reactjs"
+                class="select__options-image"
+                src="/src/assets/images/react-logo.png"
+              />
+              <span
+                class="select__options-label"
+              >
+                React
+              </span>
+            </div>
+            <div
+              class="select__options-item false"
+              data-testid="select-options-item"
+            >
+              <img
+                alt="vuejs"
+                class="select__options-image"
+                src="/src/assets/images/vue-logo.png"
+              />
+              <span
+                class="select__options-label"
+              >
+                Vue
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hacker__news__app-list-container"
+          data-testid="list-container"
+        >
+          Loading... 
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="hacker__news__app-story-container"
+    >
+      <div
+        class="tab__select-container"
+        data-testid="tab-select"
+      >
+        <div
+          class="tab__select-item selected"
+        >
+          <label
+            class="tab__select-label"
+            data-testid="tab-select-item"
+          >
+            All
+          </label>
+        </div>
+        <div
+          class="tab__select-item false"
+        >
+          <label
+            class="tab__select-label"
+            data-testid="tab-select-item"
+          >
+            My faves
+          </label>
+        </div>
+      </div>
+      <div
+        class="select__options-container"
+        data-testid="dropdown-select"
+      >
+        <div
+          class="select__options-selected"
+          data-testid="option-selected"
+        >
+          <img
+            alt="/src/assets/images/angular-logo.png"
+            class="select__options-image"
+            src="/src/assets/images/angular-logo.png"
+          />
+          <span
+            class="select__options-label"
+            data-testid="selected-option"
+          >
+            Angular
+          </span>
+          <i
+            class="select__options-arrow open"
+          />
+        </div>
+        <div
+          class="select__options-items false"
+          data-testid="select-options-items"
+        >
+          <div
+            class="select__options-item select__options-item-selected"
+            data-testid="select-options-item"
+          >
+            <img
+              alt="angular"
+              class="select__options-image"
+              src="/src/assets/images/angular-logo.png"
+            />
+            <span
+              class="select__options-label"
+            >
+              Angular
+            </span>
+          </div>
+          <div
+            class="select__options-item false"
+            data-testid="select-options-item"
+          >
+            <img
+              alt="reactjs"
+              class="select__options-image"
+              src="/src/assets/images/react-logo.png"
+            />
+            <span
+              class="select__options-label"
+            >
+              React
+            </span>
+          </div>
+          <div
+            class="select__options-item false"
+            data-testid="select-options-item"
+          >
+            <img
+              alt="vuejs"
+              class="select__options-image"
+              src="/src/assets/images/vue-logo.png"
+            />
+            <span
+              class="select__options-label"
+            >
+              Vue
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hacker__news__app-list-container"
+        data-testid="list-container"
+      >
+        Loading... 
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

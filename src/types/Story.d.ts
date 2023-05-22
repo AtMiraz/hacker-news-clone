@@ -6,3 +6,5 @@ export type Story = {
   url: string | null
   favorite: boolean
 }
+
+export type Category = 'all' | 'favorites'

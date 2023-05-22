@@ -14,14 +14,18 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
   const isFetching = useRef(false)
 
   function handleFavorite(story: Story) {
-    const newStories = stories.map((newStory) => {
+    let newStories = stories.map((newStory) => {
       if (story.createdAt === newStory.createdAt) {
         newStory.favorite = !newStory.favorite
-        handleAddRemoveFavorite(story)
+        handleAddRemoveFavorite(newStory)
         return newStory
       }
       return newStory
     })
+
+    if (mode === 'favorites') {
+      newStories = newStories.filter((newStory) => newStory.favorite)
+    }
     setStories(newStories)
   }
 
@@ -56,7 +60,7 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
             <StoryCard
               story={story}
               onClick={handleFavorite}
-              key={story.createdAt}
+              key={`${story.createdAt}-${mode}-${story.storyId}`}
             />
           ))
         : mode === 'favorites'
