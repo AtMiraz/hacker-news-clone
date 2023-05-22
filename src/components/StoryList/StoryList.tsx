@@ -55,8 +55,6 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
             }
             return story
           })
-          console.log('stories', stories)
-          console.log('favorite', favorites)
           setStories(stories)
           isFetching.current = false
         })
