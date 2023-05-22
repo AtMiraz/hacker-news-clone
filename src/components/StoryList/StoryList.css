@@ -6,6 +6,12 @@
   justify-content: space-evenly;
 }
 
+@media screen and (min-width: 1348px) {
+  .hacker__news__app-list-container {
+    justify-content: space-between;
+  }
+}
+
 .hacker__news__app-list-container > .hacker__news__app-story-card {
   margin-bottom: 1.875rem;
 }
