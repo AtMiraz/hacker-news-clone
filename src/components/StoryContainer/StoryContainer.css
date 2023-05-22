@@ -1,7 +1,30 @@
 .hacker__news__app-story-container > .select__options-container {
   margin-top: 4.25rem;
   margin-bottom: 3rem;
-  margin-left: 9.99rem;
+}
+
+@media screen and (min-width: 375px) {
+  .hacker__news__app-story-container > .select__options-container {
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .hacker__news__app-story-container > .select__options-container {
+    margin-left: 8rem;
+  }
+}
+
+@media screen and (min-width: 785px) {
+  .hacker__news__app-story-container > .select__options-container {
+    margin-left: 24rem;
+  }
+}
+
+@media screen and (min-width: 1348px) {
+  .hacker__news__app-story-container > .select__options-container {
+    margin-left: 9.9rem;
+  }
 }
 
 .hacker__news__app-story-container > .tab__select-container {

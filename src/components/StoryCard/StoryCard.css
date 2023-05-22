@@ -7,7 +7,18 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  min-width: 480px;
+}
+
+@media screen and (min-width: 375px) {
+  .hacker__news__app-story-card {
+    min-width: 360px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hacker__news__app-story-card {
+    min-width: 480px;
+  }
 }
 
 .story__card__info {
