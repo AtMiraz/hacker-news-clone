@@ -16,7 +16,7 @@ function transformHits(hits: Hit[]): Story[] {
   })
 }
 
-export async function handleFetchStories(framework: News, page = '0') {
+export async function handleFetchStories(framework: News, page = 0) {
   const url = `https://hn.algolia.com/api/v1/search_by_date?query=${framework}&page=${page}`
   const response = await fetch(url)
   const data = await response.json()
