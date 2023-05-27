@@ -9,86 +9,15 @@ exports[`StoryList test > should render the component 1`] = `
         class="hacker__news__app-list-container false"
         data-testid="list-container"
       >
+        Loading... 
         <div
-          class="hacker__news__app-story-card"
-          data-testid="story-card-component"
-        >
-          <div
-            class="story__card__info"
-          >
-            <div
-              class="story__card__info-author"
-            >
-              <img
-                alt="clock"
-                src="/src/assets/svgs/clock.svg"
-              />
-              <span
-                data-testid="story-info"
-              >
-                2020-05-15T20:57:02.000Z
-                 ago by 
-                an author
-              </span>
-            </div>
-            <div
-              class="story__card__info-title"
-              data-testid="story-title"
-            >
-              some title
-            </div>
-          </div>
-          <div
-            class="story__card__actions"
-          >
-            <img
-              alt="favorite"
-              class="story__card__actions-heart"
-              data-testid="heart-button"
-              src="/src/assets/svgs/heart-outline.svg"
-            />
-          </div>
-        </div>
+          class="list__container-go-to-top"
+          title="Go to top"
+        />
         <div
-          class="hacker__news__app-story-card"
-          data-testid="story-card-component"
-        >
-          <div
-            class="story__card__info"
-          >
-            <div
-              class="story__card__info-author"
-            >
-              <img
-                alt="clock"
-                src="/src/assets/svgs/clock.svg"
-              />
-              <span
-                data-testid="story-info"
-              >
-                2020-05-16T20:57:04.000Z
-                 ago by 
-                an author
-              </span>
-            </div>
-            <div
-              class="story__card__info-title"
-              data-testid="story-title"
-            >
-              some title
-            </div>
-          </div>
-          <div
-            class="story__card__actions"
-          >
-            <img
-              alt="favorited"
-              class="story__card__actions-heart"
-              data-testid="heart-button"
-              src="/src/assets/svgs/heart-filled.svg"
-            />
-          </div>
-        </div>
+          data-testid="ref-observable"
+          style="width: 0px; height: 0px; overflow: hidden;"
+        />
       </div>
     </div>
   </body>,
@@ -97,86 +26,15 @@ exports[`StoryList test > should render the component 1`] = `
       class="hacker__news__app-list-container false"
       data-testid="list-container"
     >
+      Loading... 
       <div
-        class="hacker__news__app-story-card"
-        data-testid="story-card-component"
-      >
-        <div
-          class="story__card__info"
-        >
-          <div
-            class="story__card__info-author"
-          >
-            <img
-              alt="clock"
-              src="/src/assets/svgs/clock.svg"
-            />
-            <span
-              data-testid="story-info"
-            >
-              2020-05-15T20:57:02.000Z
-               ago by 
-              an author
-            </span>
-          </div>
-          <div
-            class="story__card__info-title"
-            data-testid="story-title"
-          >
-            some title
-          </div>
-        </div>
-        <div
-          class="story__card__actions"
-        >
-          <img
-            alt="favorite"
-            class="story__card__actions-heart"
-            data-testid="heart-button"
-            src="/src/assets/svgs/heart-outline.svg"
-          />
-        </div>
-      </div>
+        class="list__container-go-to-top"
+        title="Go to top"
+      />
       <div
-        class="hacker__news__app-story-card"
-        data-testid="story-card-component"
-      >
-        <div
-          class="story__card__info"
-        >
-          <div
-            class="story__card__info-author"
-          >
-            <img
-              alt="clock"
-              src="/src/assets/svgs/clock.svg"
-            />
-            <span
-              data-testid="story-info"
-            >
-              2020-05-16T20:57:04.000Z
-               ago by 
-              an author
-            </span>
-          </div>
-          <div
-            class="story__card__info-title"
-            data-testid="story-title"
-          >
-            some title
-          </div>
-        </div>
-        <div
-          class="story__card__actions"
-        >
-          <img
-            alt="favorited"
-            class="story__card__actions-heart"
-            data-testid="heart-button"
-            src="/src/assets/svgs/heart-filled.svg"
-          />
-        </div>
-      </div>
+        data-testid="ref-observable"
+        style="width: 0px; height: 0px; overflow: hidden;"
+      />
     </div>
   </div>,
   "debug": [Function],

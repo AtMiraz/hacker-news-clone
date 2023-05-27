@@ -11,7 +11,7 @@ import StoryCard from '../StoryCard/StoryCard'
 
 function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
   const [stories, setStories] = useState<Story[]>([])
-  const [currentPage, setCurrentPage] = useState(0)
+  const currentPage = useRef(0)
   const isFetching = useRef(false)
   const isFirstRender = useRef(true)
   const lastElement = useRef(null)
@@ -37,7 +37,7 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
   }
 
   async function handlePopulateStories() {
-    return handleFetchStories(newsType, currentPage)
+    return handleFetchStories(newsType, currentPage.current)
   }
 
   function handlePopulateFavorites() {
@@ -64,7 +64,7 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
         })
 
         setStories((previouStories) => [...previouStories, ...newStories])
-        setCurrentPage((previousPage) => previousPage + 1)
+        currentPage.current++
 
         isFetching.current = false
         isFirstRender.current = false
@@ -93,19 +93,22 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
         observer.unobserve(lastElement.current)
       }
     }
-  }, [newsType, lastElement, currentPage])
+  }, [lastElement, newsType])
 
   useEffect(() => {
     if (isFirstRender.current) return
-    // Cleanup whenever mode changes.
-    setCurrentPage(0)
+    // Cleanup whenever mode changes or news type changes
+    // Set is fetching to avoid running the handleFetchData from
+    currentPage.current = 0
+    // the observerUseEffect
+    isFetching.current = true
     setStories([])
     if (mode === 'all') {
       handleFetchData()
     } else {
       handlePopulateFavorites()
     }
-  }, [mode])
+  }, [mode, newsType])
 
   return (
     <div
@@ -129,10 +132,12 @@ function StoryList({ mode = 'all', newsType = 'vuejs' }: StoryListProps) {
         className="list__container-go-to-top"
         title="Go to top"
         onClick={goToTop}
-      >
-        {' '}
-      </div>
-      {mode === 'all' && <div ref={lastElement}></div>}
+      ></div>
+      <div
+        ref={lastElement}
+        data-testid="ref-observable"
+        style={{ width: 0, height: 0, overflow: 'hidden', flex: 'row' }}
+      ></div>
     </div>
   )
 }

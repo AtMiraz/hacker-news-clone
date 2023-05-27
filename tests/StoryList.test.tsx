@@ -1,5 +1,6 @@
 import React from 'react'
 import StoryList from '../src/components/StoryList/StoryList'
+import 'intersection-observer'
 import { render, screen } from '@testing-library/react'
 import { expect, test, describe, vi, afterAll } from 'vitest'
 
@@ -56,6 +57,7 @@ describe('StoryList test', () => {
   test('should render the correct amount of children components', async () => {
     render(<StoryList />)
     await screen.findByTestId('list-container')
+    await screen.findAllByTestId('story-card-component')
     const cards = await screen.findAllByTestId('story-card-component')
     expect(cards.length).toBe(2)
   })
@@ -63,8 +65,9 @@ describe('StoryList test', () => {
   test('should mark a story as favorite by default when fetching if its on the localStorage', async () => {
     render(<StoryList />)
     await screen.findByTestId('list-container')
-
-    const favorited = await screen.getByAltText('favorited')
+    await screen.findAllByTestId('story-card-component')
+    let favorited = await screen.getByAltText('favorited')
+    favorited = await screen.getByAltText('favorited')
 
     expect(favorited).to.exist
   })

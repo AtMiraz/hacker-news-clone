@@ -1,7 +1,6 @@
 import {
   handleFetchStories,
   handleGetFavoriteStories,
-  handleTimeSinceDate,
 } from '../src/utils/utils'
 import { describe, test, expect, afterAll, vi } from 'vitest'
 
@@ -39,7 +38,7 @@ describe('utils lib test', () => {
     vi.restoreAllMocks()
   })
   test('should fetch stories from API and converts them to the correct format', async () => {
-    const stories = await handleFetchStories('angular', '0')
+    const stories = await handleFetchStories('angular', 0)
     expect(stories.length).toBe(1)
     expect(stories[0].title).toBe('some title')
     expect(stories[0].author).toBe('an author')
